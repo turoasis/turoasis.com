@@ -242,7 +242,7 @@
 @keyframes destination-title-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes destination-copy-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes destination-wave { 0% { transform: translateY(120%) rotate(-2deg) scaleY(.85); } 50% { transform: translateY(0) rotate(2deg) scaleY(1.1); } 100% { transform: translateY(-520%) rotate(-2deg) scaleY(.85); } }
-.destination-copy h2, .experiences-heading h2, .hotels-copy h2 { font-size: clamp(48px, 6vw, 84px); line-height: .96; margin-bottom: 25px; }
+.destination-copy h2, .experiences-heading h2, .hotels-copy h2, .flights-copy h2 { font-size: clamp(48px, 6vw, 84px); line-height: .96; margin-bottom: 25px; }
 .section-shell { padding-top: 76px; padding-bottom: 76px; }
 .eyebrow, .section-label { display: none; }
 .featured { position: relative; isolation: isolate; background: transparent; border-radius: 0; margin-top: 0; margin-bottom: 0; }
@@ -265,7 +265,7 @@ h1, h2, h3, h4 { font-family: var(--font-title); }
 .button, .nav-cta, .text-link, button { font-family: var(--font-body); }
 .nav-cta > span[data-i18n] { font-size: 12px; }
 .hero-section h1 { font-family: var(--font-title); }
-.feature-copy h2, .picks h2, .experiences-heading h2, .hotels-copy h2 { font-size: clamp(42px, 5vw, 68px); }
+.feature-copy h2, .picks h2, .experiences-heading h2, .hotels-copy h2, .flights-copy h2 { font-size: clamp(42px, 5vw, 68px); }
 .detail-hero-cover { min-height: 620px; background-position: center; background-size: cover; color: #fff; display: flex; align-items: end; }
 .detail-hero-inner { width: min(1120px, 100%); margin: 0 auto; padding: 55px 24px 58px; }
 .detail-hero-cover .back-link { color: rgba(255,255,255,.8); margin-bottom: 60px; }
@@ -371,7 +371,7 @@ h1, h2, h3, h4 { font-family: var(--font-title); }
 .request-form .button { width: 100%; justify-content: center; margin-top: 25px; }
 .request-close { position: absolute; top: 17px; right: 20px; border: 0; background: transparent; color: var(--ink); font-size: 28px; cursor: pointer; }
 @media(max-width:760px){.detail-hero-cover{min-height:680px}.detail-hero-inner{padding:38px 24px 42px}.detail-hero-cover .back-link{margin-bottom:55px}.detail-hero-cover h1{font-size:53px}.detail-hero-cover .detail-facts{display:flex;flex-wrap:nowrap;gap:14px;overflow-x:auto}.detail-hero-cover .detail-facts span{border-left:0;border-top:0;padding:0}.detail-hero-cover .detail-facts span:nth-child(3){grid-column:auto}.detail-gallery-row{grid-template-columns:repeat(3,1fr)}.detail-thumb{height:70px}.detail-tabs{display:flex;flex-wrap:nowrap;gap:0;border-radius:999px;overflow:hidden;margin-bottom:32px}.detail-panel{display:none}.detail-panel.active{display:block}.detail-panel + .detail-panel{margin-top:0;padding-top:0;border-top:0}.detail-tab{flex:1 1 0;min-width:0;white-space:nowrap;font-size:11px;padding:12px 5px}.date-cards{grid-template-columns:1fr}.date-card{display:block}.date-card > span{display:inline-block;margin-top:12px}.related-grid{grid-template-columns:1fr;gap:14px}.related-image{height:180px}.request-modal{padding:16px}.request-form{width:calc(100vw - 32px);max-height:90vh;padding:32px 23px;border-radius:22px}.request-row{grid-template-columns:1fr}}
-.destination-copy > p:not(.eyebrow), .hotels-copy > p:not(.eyebrow) { color: var(--muted); line-height: 1.8; max-width: 1120px; margin-bottom: 0; }
+.destination-copy > p:not(.eyebrow), .hotels-copy > p:not(.eyebrow), .flights-copy > p:not(.eyebrow) { color: var(--muted); line-height: 1.8; max-width: 1120px; margin-bottom: 0; }
 .destination-points { border-top: 1px solid var(--line); }
 .destination-points div { display: flex; align-items: center; gap: 22px; border-bottom: 1px solid var(--line); padding: 25px 0; font: 22px Georgia, serif; }
 .destination-points strong { color: var(--green); font: 14px Arial, sans-serif; }
@@ -397,9 +397,10 @@ h1, h2, h3, h4 { font-family: var(--font-title); }
 .hotels-section { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .hotels-image { min-height: 500px; border-radius: 22px; background: linear-gradient(180deg, transparent, rgba(18,57,54,.2)), url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=85') center/cover; }
 .hotels-image { background-size: cover !important; background-repeat: no-repeat; background-position: center; background-color: #e7efeb; }
+.flights-image { min-height: 500px; border-radius: 22px; background: linear-gradient(180deg, transparent, rgba(18,57,54,.2)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=85') center/cover; background-size: cover !important; background-repeat: no-repeat; background-position: center; background-color: #e7efeb; }
 .hotel-benefits { display: flex; flex-wrap: wrap; gap: 9px; margin: 25px 0 30px; }
 .hotel-benefits span { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; color: var(--muted); font-size: 11px; }
-@media(max-width:760px){.site-header.is-scrolled{top:8px;left:3%;width:94%;height:62px}.destination-section,.hotels-section{display:block}.destination-points{margin-top:45px}.experiences-heading{display:block}.experiences-heading>p{margin-top:25px}.experience-grid{grid-template-columns:1fr 1fr;gap:10px}.experience-grid article{padding:20px;min-height:220px}.experience-grid h3{font-size:18px}.hotels-image{min-height:330px;margin-bottom:45px}}
+@media(max-width:760px){.site-header.is-scrolled{top:8px;left:3%;width:94%;height:62px}.destination-section,.hotels-section{display:block}.destination-points{margin-top:45px}.experiences-heading{display:block}.experiences-heading>p{margin-top:25px}.experience-grid{grid-template-columns:1fr 1fr;gap:10px}.experience-grid article{padding:20px;min-height:220px}.experience-grid h3{font-size:18px}.hotels-image,.flights-image{min-height:330px;margin-bottom:45px}}
 .tour-open { display: block; width: 100%; border: 0; background: transparent; color: inherit; text-align: left; padding: 0; cursor: pointer; font: inherit; }
 .tour-image { height: 290px; margin-bottom: 22px; border-radius: 0; overflow: hidden; }
 .tour-image b { position: absolute; left: 18px; bottom: 18px; color: #fff; background: var(--green); border-radius: 999px; padding: 10px 14px; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; opacity: 0; transition: opacity .25s; z-index: 1; }
