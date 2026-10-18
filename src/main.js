@@ -136,6 +136,9 @@ document.querySelector('#app').insertAdjacentHTML('beforeend', '<div class="requ
 document.querySelector('#app').insertAdjacentHTML('beforeend', '<a class="floating-whatsapp" href="https://wa.me/18098708595" target="_blank" rel="noreferrer" aria-label="Escribir por WhatsApp"><span class="material-symbols-outlined floating-whatsapp-icon" aria-hidden="true">phone</span><span>WhatsApp</span></a>')
 
 await hydrateHomepageContent()
+const flightsContent = window.turoasisHomepage?.flights || {}
+const setFlights = (selector, value) => { const element = document.querySelector(selector); if (element && value) element.textContent = value }
+setFlights('.flights-copy .eyebrow', flightsContent.eyebrow); setFlights('.flights-copy h2', flightsContent.title); setFlights('.flights-copy > p:not(.eyebrow)', flightsContent.text); setFlights('.flight-request-button', flightsContent.cta); flightsContent.benefits?.forEach((benefit, index) => setFlights(`.flights-copy .hotel-benefits span:nth-child(${index + 1})`, benefit)); if (flightsContent.image) document.querySelector('.flights-image')?.style.setProperty('background-image', `linear-gradient(180deg,transparent,rgba(18,57,54,.2)),url('${flightsContent.image}')`)
 applyFeaturedMedia(window.turoasisHomepage)
 
 let currentLanguage = 'es'
